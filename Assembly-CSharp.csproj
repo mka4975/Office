@@ -291,11 +291,11 @@
     <Reference Include="System.Text.Encodings.Web">
       <HintPath>C:/Users/kami/work/Unity/Office/Assets/Plugins/System.Text.Encodings.Web.dll</HintPath>
     </Reference>
-    <Reference Include="System.Threading.Tasks.Extensions">
-      <HintPath>C:/Users/kami/work/Unity/Office/Assets/Plugins/System.Threading.Tasks.Extensions.dll</HintPath>
-    </Reference>
     <Reference Include="System.Text.Json">
       <HintPath>C:/Users/kami/work/Unity/Office/Assets/Plugins/System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions">
+      <HintPath>C:/Users/kami/work/Unity/Office/Assets/Plugins/System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.9f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

@@ -11,9 +11,18 @@ public class movementCamera : MonoBehaviour
     private Vector3 previousPosition = new Vector3(0, 0, 0);
     private Quaternion previousRotation = new Quaternion(0, 0, 0, 0);
 
+    private float minFov = 15f;
+    private float maxFov = 90f;
+    private float sensitivity = 10f;
+
     // Update is called once per frame
     void Update()
     {
+        float fov = Camera.main.fieldOfView;
+        fov += Input.GetAxis("Mouse ScrollWheel") * sensitivity;
+        fov = Mathf.Clamp(fov, minFov, maxFov);
+        Camera.main.fieldOfView = fov;
+
         //rotating the camera with the mouse
         yaw += speedH * Input.GetAxis("Mouse X");
         pitch -= speedV * Input.GetAxis("Mouse Y");
