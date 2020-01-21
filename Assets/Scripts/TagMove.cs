@@ -22,6 +22,21 @@ public class TagMove : MonoBehaviour
     public GameObject tag26468 = null;
     public GameObject text26468 = null;
 
+    int i1;
+    int x1;
+    int y1;
+    int i2;
+    int x2;
+    int y2;
+    int i3;
+    int x3;
+    int y3;
+    int i4;
+    int x4;
+    int y4;
+    int i5;
+    int x5;
+    int y5;
 
     string connString = "Host=localhost;Username=postgres;Password=postgres;Database=pozyx";
     NpgsqlDataReader dr = null;
@@ -49,6 +64,25 @@ public class TagMove : MonoBehaviour
         Connect();
     }
 
+    private void init()
+    {
+        i1 = 0;
+        x1 = 0;
+        y1 = 0;
+        i2 = 0;
+        x2 = 0;
+        y2 = 0;
+        i3 = 0;
+        x3 = 0;
+        y3 = 0;
+        i4 = 0;
+        x4 = 0;
+        y4 = 0;
+        i5 = 0;
+        x5 = 0;
+        y5 = 0;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -58,21 +92,7 @@ public class TagMove : MonoBehaviour
             return;
         }
 
-        int i1 = 0;
-        int x1 = 0;
-        int y1 = 0;
-        int i2 = 0;
-        int x2 = 0;
-        int y2 = 0;
-        int i3 = 0;
-        int x3 = 0;
-        int y3 = 0;
-        int i4 = 0;
-        int x4 = 0;
-        int y4 = 0;
-        int i5 = 0;
-        int x5 = 0;
-        int y5 = 0;
+        
 
         if (dr.GetInt32(0) == 26386)
         {
@@ -102,7 +122,7 @@ public class TagMove : MonoBehaviour
             {
                 tag26474.transform.position = new Vector3(x2 / 5, 8, y2 / 5);
                 text26474.GetComponent<TextMesh>().text = "tagId: 26474" + "\nx: " + x2 / 5 + "\ny: " + y2 / 5;
-                i1 = 0;
+                i2 = 0;
             }
             tag26474.transform.position = new Vector3(dr.GetInt32(2) / 100 + 6, 8, dr.GetInt32(3) / 100);
             text26474.GetComponent<TextMesh>().text = "tagId: " + dr.GetInt32(0) + "\nx: " + dr.GetInt32(2) + "\ny: " + dr.GetInt32(3);
