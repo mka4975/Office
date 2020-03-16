@@ -2,7 +2,7 @@
 
 public class movementCamera : MonoBehaviour
 {
-    public float speed = 2.0f;
+    public float speed = 5.0f;
     public float speedH = 2.0f;
     public float speedV = 2.0f;
 
