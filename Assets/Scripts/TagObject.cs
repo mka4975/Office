@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Net.Sockets;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using Assets.Scripts;
+using UnityEngine;
 
 namespace Assets.Scripts
 {
-    class TagObject
+    public class TagObject : MonoBehaviour
     {
         public long TagId { get; set; }
 
@@ -30,7 +33,7 @@ namespace Assets.Scripts
 
         public override string ToString()
         {
-            return $"{nameof(TagId)}: {TagId}, {nameof(Datetime)}: {Datetime}, {nameof(X)}: {X}, {nameof(Y)}: {Y}";
+            return $"{nameof(TagId)}:{TagId}; {nameof(Datetime)}:{Datetime}; {nameof(X)}:{X}; {nameof(Y)}:{Y}";
         }
     }
 }
